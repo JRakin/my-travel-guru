@@ -1,0 +1,17 @@
+.views {
+  display: flex;
+}
+.tourSection {
+  color: #fff;
+  margin: 60px auto;
+}
+.imageBtn {
+  width: 235px;
+  height: 305px;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}

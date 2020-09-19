@@ -1,0 +1,13 @@
+.loginForm {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px 20px;
+  width: 400px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 20px lightgrey;
+  border-radius: 7px;
+  transition: 0.4s;
+}
+.loginForm:hover {
+  background-color: #fff;
+}
