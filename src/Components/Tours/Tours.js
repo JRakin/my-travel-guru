@@ -18,7 +18,7 @@ const Tours = () => {
       <Container>
         <div className="views">
           <div style={{ margin: '0 auto' }}>
-            <ViewDetails data={view}></ViewDetails>
+            <ViewDetails showOnDetails={true} data={view}></ViewDetails>
           </div>
           <div style={{ display: 'flex' }}>
             <div style={{ padding: '20px 10px' }}>

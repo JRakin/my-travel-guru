@@ -1,12 +1,12 @@
 const fakeData = [
   {
-    id: 1,
+    id: '1',
     name: "Cox's Bazar",
     description:
       'Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds.',
     room: [
       {
-        id: 101,
+        id: 108,
         roomName: 'Light bright airy stylish apt',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -16,10 +16,10 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.9,
-        image: '',
+        image: 'https://i.ibb.co/x6bXQ7f/Rectangle-26.png',
       },
       {
-        id: 102,
+        id: 109,
         roomName: 'Lost panorama apt',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -29,10 +29,10 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.7,
-        image: '',
+        image: 'https://i.ibb.co/K7MqxPr/Rectangle-27.png',
       },
       {
-        id: 103,
+        id: 110,
         roomName: 'AR lounge and pool',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -42,18 +42,18 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.8,
-        image: '',
+        image: 'https://i.ibb.co/XDxFmWZ/Rectangle-28.png',
       },
     ],
   },
   {
-    id: 2,
+    id: '2',
     name: 'Sajek',
     description:
       'Sajek valley is known for its natural environment and is surrounded by mountains, dense forest, and grassland hill tracks. Many small rivers flow through the mountains among which the Kachalong and the Machalong are notable. On the way to Sajek valley, one has to cross the Mayni range and the Mayni river.',
     room: [
       {
-        id: 105,
+        id: 108,
         roomName: 'Light bright airy stylish apt',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -63,10 +63,10 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.9,
-        image: '',
+        image: 'https://i.ibb.co/x6bXQ7f/Rectangle-26.png',
       },
       {
-        id: 106,
+        id: 109,
         roomName: 'Lost panorama apt',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -76,10 +76,10 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.7,
-        image: '',
+        image: 'https://i.ibb.co/K7MqxPr/Rectangle-27.png',
       },
       {
-        id: 107,
+        id: 110,
         roomName: 'AR lounge and pool',
         roomDescription:
           'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
@@ -89,12 +89,12 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.8,
-        image: '',
+        image: 'https://i.ibb.co/XDxFmWZ/Rectangle-28.png',
       },
     ],
   },
   {
-    id: 3,
+    id: '3',
     name: 'Sreemangal',
     description:
       'Madhobpur Lake is one of the main tourist attractions in the area, and is home to the Great White-Bellied Heron, the only confirmed site in Bangladesh.The Baikka beel is also a nearby body of water and home to the Large-billed reed warbler.',
@@ -110,7 +110,7 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.9,
-        image: '',
+        image: 'https://i.ibb.co/x6bXQ7f/Rectangle-26.png',
       },
       {
         id: 109,
@@ -123,7 +123,7 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.7,
-        image: '',
+        image: 'https://i.ibb.co/K7MqxPr/Rectangle-27.png',
       },
       {
         id: 110,
@@ -136,7 +136,7 @@ const fakeData = [
         numberOfBath: 2,
         price: 34,
         rating: 4.8,
-        image: '',
+        image: 'https://i.ibb.co/XDxFmWZ/Rectangle-28.png',
       },
     ],
   },

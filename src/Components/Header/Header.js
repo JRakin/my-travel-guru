@@ -133,10 +133,12 @@ const Header = () => {
             />
           </div>
           <div style={{ marginLeft: '120px' }}>
-            <Link to="/news" className={classes.linkBtn}>
-              News
+            <Link to="/" className={classes.linkBtn}>
+              Home
             </Link>
-            <Link className={classes.linkBtn}>Destination</Link>
+            <Link to="/tours" className={classes.linkBtn}>
+              Destination
+            </Link>
             <Link to="/Blog" className={classes.linkBtn}>
               Blog
             </Link>

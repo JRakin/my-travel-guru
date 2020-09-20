@@ -5,6 +5,7 @@ import Book from './Components/Book/Book';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Rooms from './Components/Room/Room';
 import Tours from './Components/Tours/Tours';
 
 export const UserContext = createContext();
@@ -23,9 +24,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/book">
+          <Route path="/book/:id">
             <Book></Book>
-          </PrivateRoute>
+          </Route>
+          <Route path="/room/:id">
+            <Rooms></Rooms>
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

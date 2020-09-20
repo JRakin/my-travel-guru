@@ -1,0 +1,41 @@
+.placeForm {
+  width: 300px;
+  background-color: #fff;
+  color: black;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 90px;
+  box-shadow: 7px 7px 15px lightslategray;
+}
+.placeForm input[type='text'] {
+  width: 220px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+.placeForm input[type='text']:focus {
+  border-bottom: 1px solid red;
+}
+.placeForm input[type='date'] {
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.placeForm input[type='submit'] {
+  width: 240px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: red;
+}
+.placeForm input[type='submit']:hover {
+  background-color: rgb(189, 0, 0);
+}

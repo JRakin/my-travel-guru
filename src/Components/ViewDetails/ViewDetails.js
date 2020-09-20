@@ -4,14 +4,19 @@ import './ViewDetails.css';
 
 const ViewDetails = (props) => {
   const data = props.data;
-  const to = `/book/${data.id}`;
+
   return (
     <div>
-      <h1>{data.name}</h1>
-      <p>{data.description}</p>
-      <Link to={to}>
-        <button className="bookBtn">Book now</button>
-      </Link>
+      <h1 style={{ fontSize: '50px', margin: '20px 0' }}>{data.name}</h1>
+      <p style={{ fontSize: '18px', textAlign: 'justify' }}>
+        {data.description}
+      </p>
+
+      {props.showOnDetails && (
+        <Link to={'/book/' + data.id}>
+          <button className="bookBtn">Book now</button>
+        </Link>
+      )}
     </div>
   );
 };
