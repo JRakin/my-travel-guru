@@ -8,6 +8,8 @@ import { Container } from '@material-ui/core';
 const Book = () => {
   const { id } = useParams();
 
+  // booking info section
+
   const tourDetails = fakeData.find((tour) => tour.id === id);
 
   let history = useHistory();

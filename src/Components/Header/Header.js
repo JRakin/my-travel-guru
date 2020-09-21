@@ -7,6 +7,7 @@ import {
   Button,
   Avatar,
   Typography,
+  Container,
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import React, { useContext } from 'react';
@@ -15,10 +16,9 @@ import { UserContext } from '../../App';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 
+// material ui
+
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -108,17 +108,19 @@ const Header = () => {
   };
 
   return (
-    <div className={classes.grow}>
+    <div>
       <AppBar
         style={{ background: 'transparent', boxShadow: 'none' }}
         position="sticky"
       >
         <Toolbar>
-          <img
-            className={classes.appLogo}
-            src="../../Logo.png"
-            alt="logo"
-          ></img>
+          <div>
+            <img
+              className={classes.appLogo}
+              src="../../Logo.png"
+              alt="logo"
+            ></img>
+          </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

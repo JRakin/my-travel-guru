@@ -1,48 +1,19 @@
-import {
-  Button,
-  FormControlLabel,
-  Link,
-  makeStyles,
-  TextField,
-  Typography,
-  withStyles,
-} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import './Login.css';
 import React, { useContext } from 'react';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
-import { CheckBox, CheckBoxOutlineBlank } from '@material-ui/icons';
+
 import firebaseConfig from './firebase.config';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { UserContext } from '../../App';
-import { useHistory, useLocation } from 'react-router-dom';
-
-const CssTextField = withStyles({
-  root: {
-    borderBottom: '#fff',
-    '& label.Mui-focused': {
-      color: 'red',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'red',
-    },
-  },
-})(TextField);
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  margin: {
-    margin: theme.spacing(0.2),
-    borderBottom: '#fff',
-  },
-}));
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import swal from 'sweetalert';
 
 //authentication and login functionality
 
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -70,8 +41,11 @@ const Login = () => {
       })
       .catch((err) => {
         if (err) {
-          console.log(err.message);
-          alert('something went wrong please try again!');
+          swal(
+            'Sorry',
+            'Something went wrong, please try again later!',
+            'error'
+          );
         }
       });
   };
@@ -93,86 +67,45 @@ const Login = () => {
         history.replace(from);
       })
       .catch((err) => {
-        console.log(err.message);
+        if (err) {
+          swal(
+            'Sorry',
+            'Something went wrong, please try again later!',
+            'error'
+          );
+        }
       });
   };
 
-  const classes = useStyles();
   return (
     <div>
-      <div className="loginForm">
-        <form>
-          <Typography variant="h5" component="h5">
-            Login
-          </Typography>
-          <CssTextField
-            className={classes.margin}
-            required
-            name="name"
-            id="standard-required"
-            label="Username or Email"
-            placeholder="Username or Email"
-          />
-          <br />
-          <CssTextField
-            className={classes.margin}
-            id="standard-password-input"
-            label="Password"
-            name="password"
-            required
-            type="password"
-            autoComplete="current-password"
-            placeholder="Password"
-          />
-          <div
+      <div>
+        <div className="loginForm">
+          <h1
             style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              margin: '10px 8px',
+              color: 'gray',
+              margin: '10px 0 30px 0',
+              textAlign: 'center',
             }}
           >
-            <FormControlLabel
-              control={
-                <CheckBox
-                  icon={<CheckBoxOutlineBlank fontSize="small" />}
-                  checkedicon={<CheckBoxIcon fontSize="small" />}
-                  name="checkedI"
-                  color="primary"
-                />
-              }
-              label="Remember me"
-            />
-            <Link style={{ cursor: 'pointer', color: 'red' }}>
-              Forgot password
+            Sign in
+          </h1>
+          <form action="">
+            <input type="text" name="" id="" placeholder="Username or Email" />{' '}
+            <br />
+            <input type="password" name="" id="" placeholder="Password" />{' '}
+            <br />
+            <Link style={{ textDecoration: 'none', color: 'red' }}>
+              {' '}
+              Forgot password?
+            </Link>{' '}
+            <br />
+            <input type="submit" value="Sign in" name="" id="" /> <br />
+            <Link to="/signup" style={{ textDecoration: 'none', color: 'red' }}>
+              New user?
             </Link>
-          </div>
-          <Button
-            style={{
-              backgroundColor: 'red',
-              margin: '20px auto',
-              borderRadius: '30px',
-              width: '200px',
-            }}
-            variant="contained"
-            color="secondary"
-          >
-            Login
-          </Button>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              margin: '10px 8px',
-            }}
-          >
-            <Typography variant="subtitle1" component="p">
-              Don't have an account?
-            </Typography>
-            <Link style={{ cursor: 'pointer', color: 'red' }} to="/signup">
-              Sign up
-            </Link>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
       <div
         style={{

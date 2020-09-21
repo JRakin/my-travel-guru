@@ -1,5 +1,6 @@
 .roomInfo {
   display: flex;
+  box-sizing: border-box;
   width: 600px;
   color: gray;
   padding: 10px;
@@ -8,6 +9,6 @@
   margin: 40px;
 }
 .aptInfo h4 {
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   font-weight: 300;
 }

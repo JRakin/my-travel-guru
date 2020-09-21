@@ -21,7 +21,15 @@ const HotelRoom = (props) => {
               <h4>{room.numberOfBath} Baths</h4>
             </div>
             <div>
-              <p style={{ margin: '3px 0' }}>{room.roomDescription}</p>
+              <p
+                style={{
+                  margin: '5px 0',
+                  fontSize: '15px',
+                  fontWeight: '300',
+                }}
+              >
+                {room.roomDescription}
+              </p>
             </div>
           </div>
         </div>

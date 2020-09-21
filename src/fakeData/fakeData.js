@@ -2,6 +2,8 @@ const fakeData = [
   {
     id: '1',
     name: "Cox's Bazar",
+    lat: 21.4285,
+    lng: 91.9702,
     description:
       'Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds.',
     room: [
@@ -49,6 +51,8 @@ const fakeData = [
   {
     id: '2',
     name: 'Sajek',
+    lat: 23.4056,
+    lng: 92.2786,
     description:
       'Sajek valley is known for its natural environment and is surrounded by mountains, dense forest, and grassland hill tracks. Many small rivers flow through the mountains among which the Kachalong and the Machalong are notable. On the way to Sajek valley, one has to cross the Mayni range and the Mayni river.',
     room: [
@@ -96,6 +100,8 @@ const fakeData = [
   {
     id: '3',
     name: 'Sreemangal',
+    lat: 24.3065,
+    lng: 91.7296,
     description:
       'Madhobpur Lake is one of the main tourist attractions in the area, and is home to the Great White-Bellied Heron, the only confirmed site in Bangladesh.The Baikka beel is also a nearby body of water and home to the Large-billed reed warbler.',
     room: [

@@ -1,13 +1,50 @@
 .loginForm {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #fff;
   padding: 30px 20px;
   width: 400px;
   margin: 30px auto;
   box-sizing: border-box;
   box-shadow: 8px 8px 20px lightgrey;
   border-radius: 7px;
-  transition: 0.4s;
 }
-.loginForm:hover {
-  background-color: #fff;
+.loginForm input[type='text'],
+.loginForm input[type='password'],
+.loginForm input[type='email'] {
+  width: 250px;
+  height: 25px;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  background-color: inherit;
+  border-bottom: 1px solid black;
+  outline: none;
+  transition: 0.6s;
+  transition-timing-function: ease;
+}
+.loginForm input[type='text']:focus,
+.loginForm input[type='password']:focus,
+.loginForm input[type='email']:focus {
+  border-bottom: 1px solid red;
+}
+.loginForm input[type='submit'] {
+  background-color: red;
+  border: none;
+  border-radius: 30px;
+  width: 250px;
+  padding: 7px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  transition: 0.8s;
+  transition-timing-function: ease;
+}
+.loginForm input[type='submit']:hover {
+  background-color: rgb(145, 0, 0);
+}
+.loginForm form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

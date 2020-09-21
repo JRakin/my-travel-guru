@@ -7,6 +7,8 @@ import ViewDetails from '../ViewDetails/ViewDetails';
 const Tours = () => {
   const data = fakeData;
 
+  // homepage
+
   const [view, setView] = useState(data[0]);
 
   const handleView = (item) => {
@@ -17,10 +19,12 @@ const Tours = () => {
     <div className="tourSection">
       <Container>
         <div className="views">
+          {/* description */}
           <div style={{ margin: '0 auto' }}>
             <ViewDetails showOnDetails={true} data={view}></ViewDetails>
           </div>
-          <div style={{ display: 'flex' }}>
+          {/* image buttons on right side */}
+          <div style={{ display: 'flex', marginLeft: '30px' }}>
             <div style={{ padding: '20px 10px' }}>
               <button className="imageBtn" onClick={() => handleView(data[0])}>
                 <img

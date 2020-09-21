@@ -6,6 +6,7 @@ import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Rooms from './Components/Room/Room';
+import SignUp from './Components/SignUp/SignUp';
 import Tours from './Components/Tours/Tours';
 
 export const UserContext = createContext();
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/signup">
+            <SignUp></SignUp>
           </Route>
           <Route path="/book/:id">
             <Book></Book>
