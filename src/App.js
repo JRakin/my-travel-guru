@@ -4,6 +4,7 @@ import './App.css';
 import Book from './Components/Book/Book';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
+import NotFound from './Components/NotFound/NotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Rooms from './Components/Room/Room';
 import SignUp from './Components/SignUp/SignUp';
@@ -28,11 +29,14 @@ function App() {
           <Route path="/signup">
             <SignUp></SignUp>
           </Route>
-          <Route path="/book/:id">
+          <PrivateRoute path="/book/:id">
             <Book></Book>
-          </Route>
-          <Route path="/room/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/room/:id">
             <Rooms></Rooms>
+          </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
       </Router>

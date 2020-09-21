@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import './Login.css';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import firebaseConfig from './firebase.config';
 import * as firebase from 'firebase/app';
@@ -23,6 +23,17 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: '/' } };
+
+  const [user, setUser] = useState({
+    isLoggedIn: false,
+    name: '',
+    email: '',
+    password: '',
+    photoUrl: '',
+  });
+
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
   const handleSignInWithGoogle = () => {
     firebase
@@ -77,6 +88,37 @@ const Login = () => {
       });
   };
 
+  const handleChange = (e) => {
+    if (e.target.name === 'email') {
+      setEmail(e.target.value);
+    }
+    if (e.target.name === 'password') {
+      setPass(e.target.value);
+    }
+    e.preventDefault();
+  };
+
+  const handleSubmit = (e) => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, pass)
+      .then((res) => {
+        const signedInUser = {
+          name: res.user.displayName,
+          email: res.user.email,
+          photoURL: res.user.photoURL,
+          isLoggedIn: true,
+        };
+        setLoggedInUser(signedInUser);
+        history.replace(from);
+      })
+      .catch((err) => {
+        swal(`${err.message}`, 'error');
+      });
+
+    e.preventDefault();
+  };
+
   return (
     <div>
       <div>
@@ -90,17 +132,29 @@ const Login = () => {
           >
             Sign in
           </h1>
-          <form action="">
-            <input type="text" name="" id="" placeholder="Username or Email" />{' '}
+          <form onSubmit={handleSubmit} method="post">
+            <input
+              type="text"
+              onBlur={handleChange}
+              name="email"
+              id="email"
+              placeholder="Username or Email"
+            />{' '}
             <br />
-            <input type="password" name="" id="" placeholder="Password" />{' '}
+            <input
+              type="password"
+              onBlur={handleChange}
+              name="password"
+              id=""
+              placeholder="Password"
+            />{' '}
             <br />
-            <Link style={{ textDecoration: 'none', color: 'red' }}>
+            <Link to="/forgot" style={{ textDecoration: 'none', color: 'red' }}>
               {' '}
               Forgot password?
             </Link>{' '}
             <br />
-            <input type="submit" value="Sign in" name="" id="" /> <br />
+            <input type="submit" value="Sign in" /> <br />
             <Link to="/signup" style={{ textDecoration: 'none', color: 'red' }}>
               New user?
             </Link>

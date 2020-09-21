@@ -25,6 +25,7 @@
 .loginForm input[type='password']:focus,
 .loginForm input[type='email']:focus {
   border-bottom: 1px solid red;
+  background-color: inherit;
 }
 .loginForm input[type='submit'] {
   background-color: red;
