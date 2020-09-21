@@ -20,7 +20,7 @@ const ShowMap = (props) => {
     <div>
       <ReactMapGL
         {...viewPort}
-        mapboxApiAccessToken={process.env.REACT_APP_MAP_TOKEN}
+        mapboxApiAccessToken="pk.eyJ1IjoianVhaWQiLCJhIjoiY2tmY2F1OTFrMTZ1bTM2bzVuc3c5YXY4dSJ9.eKRwgyE4P9zylqiJa1Q_FA"
         onViewportChange={(viewPort) => {
           setViewPort(viewPort);
         }}

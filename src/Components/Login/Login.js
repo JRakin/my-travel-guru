@@ -113,7 +113,7 @@ const Login = () => {
         history.replace(from);
       })
       .catch((err) => {
-        swal(`${err.message}`, 'error');
+        swal('Sorry', 'please insert a valid email', 'warning');
       });
 
     e.preventDefault();

@@ -7,7 +7,6 @@ import {
   Button,
   Avatar,
   Typography,
-  Container,
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import React, { useContext } from 'react';
