@@ -86,11 +86,11 @@ const SignUp = () => {
 
   const handleChange = (e) => {
     let isFormValid = true;
+
     if (e.target.name === 'email') {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       isFormValid = re.test(e.target.value);
-    }
-    if (e.target.name === 'password') {
+    } else if (e.target.name === 'password') {
       const isPassValid = e.target.value.length >= 6;
       const isNumber = /\d{1}/.test(e.target.value);
 
@@ -99,8 +99,7 @@ const SignUp = () => {
       if (isFormValid) {
         setNewPassword(e.target.value);
       }
-    }
-    if (e.target.name === 'confirmPassword') {
+    } else if (e.target.name === 'confirmPassword') {
       const isPassValid = e.target.value.length >= 6;
       const isNumber = /\d{1}/.test(e.target.value);
 
@@ -112,8 +111,6 @@ const SignUp = () => {
     }
     if (isFormValid) {
       const newUserInfo = { ...user };
-
-      newUserInfo[e.target.name] = e.target.value;
       newUserInfo[e.target.name] = e.target.value;
       setUser(newUserInfo);
     }
@@ -140,8 +137,9 @@ const SignUp = () => {
         .catch((error) => {
           let newUserInfo = { ...user };
           newUserInfo.error = error.message;
-          newUserInfo.success = false;
+          newUserInfo.isLoggedIn = false;
           setUser(newUserInfo);
+          swal('Sorry', 'please provide valid information', 'warning');
         });
     }
 
@@ -192,6 +190,7 @@ const SignUp = () => {
             type="email"
             onBlur={handleChange}
             name="email"
+            id="email"
             placeholder="Email"
             required
           />{' '}
@@ -200,7 +199,7 @@ const SignUp = () => {
             type="password"
             onBlur={handleChange}
             name="password"
-            id=""
+            id="password"
             required
             placeholder="Password"
           />{' '}
@@ -209,7 +208,7 @@ const SignUp = () => {
             type="password"
             onBlur={handleChange}
             name="confirmPassword"
-            id=""
+            id="confirmPassword"
             required
             placeholder="Confirm Password"
           />{' '}
