@@ -1,9 +1,5 @@
-.views {
-  display: flex;
-}
 .tourSection {
   color: #fff;
-  margin: 60px auto;
 }
 .imageBtn {
   width: 235px;

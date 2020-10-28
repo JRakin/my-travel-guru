@@ -1,0 +1,20 @@
+.navbar-container .nav-item .nav-link {
+  color: #fff;
+  font-size: 18px;
+}
+.navbar-container .nav-item .nav-link:hover,
+.navbar-container .nav-item .nav-link:active,
+.navbar-container .nav-item .nav-link:focus {
+  color: #cdcdcd;
+}
+.logo {
+  height: 50px;
+  filter: brightness(1000%);
+}
+.nav-item .loginBtn {
+  background-color: red;
+  padding: 6px 22px !important;
+  width: 120px;
+  text-align: center;
+  border-radius: 30px;
+}

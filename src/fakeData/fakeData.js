@@ -146,5 +146,54 @@ const fakeData = [
       },
     ],
   },
+  {
+    id: '4',
+    name: 'Sundarban',
+    lat: 21.9497,
+    lng: 89.1833,
+    description:
+      "The Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh.",
+    room: [
+      {
+        id: 108,
+        roomName: 'Light bright airy stylish apt',
+        roomDescription:
+          'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
+        numberOfBedroom: 2,
+        numberOfGuests: 4,
+        numberOfBed: 2,
+        numberOfBath: 2,
+        price: 34,
+        rating: 4.9,
+        image: 'https://i.ibb.co/x6bXQ7f/Rectangle-26.png',
+      },
+      {
+        id: 109,
+        roomName: 'Lost panorama apt',
+        roomDescription:
+          'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
+        numberOfBedroom: 2,
+        numberOfGuests: 4,
+        numberOfBed: 2,
+        numberOfBath: 2,
+        price: 34,
+        rating: 4.7,
+        image: 'https://i.ibb.co/K7MqxPr/Rectangle-27.png',
+      },
+      {
+        id: 110,
+        roomName: 'AR lounge and pool',
+        roomDescription:
+          'Wi-fi, Air Conditioning, Full view of the beach, Cancellation flexibility.',
+        numberOfBedroom: 2,
+        numberOfGuests: 4,
+        numberOfBed: 2,
+        numberOfBath: 2,
+        price: 34,
+        rating: 4.8,
+        image: 'https://i.ibb.co/XDxFmWZ/Rectangle-28.png',
+      },
+    ],
+  },
 ];
 export default fakeData;

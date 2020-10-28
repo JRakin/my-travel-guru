@@ -24,14 +24,6 @@ const Login = () => {
   const location = useLocation();
   const { from } = location.state || { from: { pathname: '/' } };
 
-  const [user, setUser] = useState({
-    isLoggedIn: false,
-    name: '',
-    email: '',
-    password: '',
-    photoUrl: '',
-  });
-
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
@@ -113,7 +105,7 @@ const Login = () => {
         history.replace(from);
       })
       .catch((err) => {
-        swal('Sorry', 'please insert a valid email', 'warning');
+        swal('Sorry', 'please insert a valid email or password', 'warning');
       });
 
     e.preventDefault();

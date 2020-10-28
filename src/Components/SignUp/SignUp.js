@@ -132,6 +132,7 @@ const SignUp = () => {
           setUser(newUserInfo);
           updateUserInfo(newUserInfo.firstName, newUserInfo.lastName);
           setLoggedInUser(newUserInfo);
+          verifyEmail();
           history.replace(from);
         })
         .catch((error) => {
@@ -155,6 +156,18 @@ const SignUp = () => {
       .then(() => {})
       .catch(() => {
         console.log('Error');
+      });
+  };
+  const verifyEmail = () => {
+    var user = firebase.auth().currentUser;
+
+    user
+      .sendEmailVerification()
+      .then(function () {
+        // Email sent.
+      })
+      .catch(function (error) {
+        swal('Sorry', 'Something went wrong!', 'error');
       });
   };
   return (

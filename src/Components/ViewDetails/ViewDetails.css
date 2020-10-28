@@ -4,12 +4,12 @@
   outline: none;
   border: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 .bookBtn:hover {
   background-color: rgb(189, 0, 0);
-  border: 1px solid #fff;
+  color: #fff;
 }

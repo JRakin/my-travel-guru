@@ -14,7 +14,7 @@ const ViewDetails = (props) => {
 
       {props.showOnDetails && (
         <Link to={'/book/' + data.id}>
-          <button className="bookBtn">Book now</button>
+          <button className="btn bookBtn">Book now</button>
         </Link>
       )}
     </div>
